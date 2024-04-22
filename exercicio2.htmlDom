@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício DOM</title>
+</head>
+<body>
+    <ul id="lista">
+        <li>Item inicial</li>
+    </ul>
+    <button onclick="adicionarItem()">Adicionar Item</button>     
+    <button onclick="removerItem()"> remover Item </button>
+    <script>
+        function adicionarItem(){
+            let novoItem = document.createElement('li');
+            novoItem.textContent = "item2";
+            novoItem.id = "item2";
+            document.body.appendChild(novoItem);
+        }
+        function removerItem() {
+            let ultimoTeam = document.getElementById('item2')
+            document.body.removeChild(ultimoTeam)
+        }
+    </script>
+</body>
+</html>
